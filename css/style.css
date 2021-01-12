@@ -59,6 +59,7 @@ body {
 /*HEADER*/
 .header {
     position: sticky;
+    background-color: red;
     top: 0;
 }
 .header h1 {
