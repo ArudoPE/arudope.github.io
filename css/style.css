@@ -40,14 +40,14 @@ body {
 }
 /*GLOBAL VARRIABLES*/
 :root {
-    --header-title-font-size: 2.5rem;
+    --header-link-font-size: 1.4rem;
     --main-title-font-size: 2.2rem;
     --main-subtitle-font-size: 1.8rem;
     --main-font-text: 1.4rem;
     --footer-font-size: 1.3rem;
 }
 /*MEDIA*/
-@media(min-width:800px){
+@media(min-width:900px){
     :root {
         --main-font-text: 1.6rem;
     }
@@ -58,12 +58,26 @@ body {
 }
 /*HEADER*/
 .header {
-    position: sticky;
-    background-color: red;
-    top: 0;
+    display: flex;
+    margin: 10px;
 }
-.header h1 {
-    font-size: var(--header-title-font-size);
+.header-nav-bar {
+    justify-self: flex-end;
+    margin-left: 5vw;
+}
+.header-nav-bar a{
+    font-size: var(--header-link-font-size);
+    color: black;
+    margin-right: 5px;
+}
+.header-name-container img{
+    display: block;
+    position: relative;
+    top: -5px;
+    left: 0;
+}
+.header-name-image {
+    width: 32px;
 }
 /*MAIN*/
 .main {
@@ -73,15 +87,18 @@ body {
     font-size: var(--main-font-text);
 }
 .welcome-section {
-    height: 100vh;
 }
 .welcome-section-title {
     font-size: var(--main-title-font-size);
+}
+.welcome-section span {
+    font-weight: bold;
 }
 .welcome-section-subtitle {
     font-size: var(--main-subtitle-font-size);
 }
 /*FOOTER*/
 .footer {
+    margin: 10px;
     font-size: var(--footer-font-size);
 }
