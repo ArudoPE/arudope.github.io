@@ -6,6 +6,7 @@
 }
 body {
     font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
     /*ANIMATION*/
     -webkit-animation: bgcolor 20s infinite;
     animation: bgcolor 10s infinite;
@@ -13,6 +14,8 @@ body {
     animation-direction: alternate;
     color: black;
 }
+/*FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 /*BODY BACKGROUND*/
 @keyframes bgcolor {
     0% {
@@ -38,6 +41,8 @@ body {
 /*GLOBAL VARRIABLES*/
 :root {
     --header-title-font-size: 2.5rem;
+    --main-title-font-size: 2.2rem;
+    --main-subtitle-font-size: 1.8rem;
     --main-font-text: 1.4rem;
     --footer-font-size: 1.3rem;
 }
@@ -52,13 +57,28 @@ body {
     text-align: center;
 }
 /*HEADER*/
+.header {
+    position: sticky;
+    top: 0;
+}
 .header h1 {
     font-size: var(--header-title-font-size);
-    margin-top: 30px;
 }
 /*MAIN*/
+.main {
+    margin: 10px;
+}
 .main p {
     font-size: var(--main-font-text);
+}
+.welcome-section {
+    height: 100vh;
+}
+.welcome-section-title {
+    font-size: var(--main-title-font-size);
+}
+.welcome-section-subtitle {
+    font-size: var(--main-subtitle-font-size);
 }
 /*FOOTER*/
 .footer {
