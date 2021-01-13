@@ -55,7 +55,8 @@ body {
     --main-title-font-size: 1.8rem;
     --main-subtitle-font-size: 1.5rem;
     --main-font-text: 1.4rem;
-    --footer-font-size: 1.2rem;
+    --footer-font-size: 1.1rem;
+    --tile-font-size: 1rem;
 }
 /*MEDIA*/
 @media(min-width:900px){
@@ -87,8 +88,18 @@ body {
     height: 200px;
     background: rgba(29, 29, 29, 0.5);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: top;
+    background-size:auto;
+}
+.project-tile a{
+    text-decoration: none;
+}
+.tile-title {
+    font-size: var(--tile-font-size);
+    background: rgba(29, 29, 29, 0.7);
+    position: relative;
+    top: 182px;
+    color: white;
 }
 /*HEADER*/
 .header {
@@ -127,7 +138,7 @@ body {
 .projects-section {
     margin-top: 20px;
 }
-.projects-grid {
+.projects-flexbox {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -135,6 +146,34 @@ body {
 }
 .tile1 {
     background-image: url("../img/tribute_tile.png");
+}
+.tile2{
+    background-image: url("../img/survey_tile.png");
+    background-position: top left;
+}
+.tile3 {
+    background-image: url("../img/paselys_tile.png");
+    background-position: top center;
+    background-size: contain;
+}
+/*CONTACT SECTION*/
+.contact-subtitle {
+    font-size: var(--header-link-font-size);
+}
+.contact-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.contact-bar img {
+    width: 48px;
+}
+.contact-bar a {
+    text-decoration: none;
+    color: black;
+    font-size: var(--tile-font-size);
+    font-weight: bold;
 }
 /*FOOTER*/
 .footer {
