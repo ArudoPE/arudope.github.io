@@ -16,7 +16,7 @@ body {
 }
 /*FONT*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
-/*BODY BACKGROUND*/
+/*ANIMATIONS*/
 @keyframes bgcolor {
     0% {
         background-color: #e39844;
@@ -38,13 +38,24 @@ body {
         background-color: #f4d1d3;
     }
 }
+@keyframes spancolor {
+    0% {
+        color: black;
+    }
+    50% {
+        color:rgb(228, 52, 52);
+    }
+    100% {
+        color: red;
+    }
+}
 /*GLOBAL VARRIABLES*/
 :root {
-    --header-link-font-size: 1.4rem;
-    --main-title-font-size: 2.2rem;
-    --main-subtitle-font-size: 1.8rem;
+    --header-link-font-size: 1.2rem;
+    --main-title-font-size: 1.8rem;
+    --main-subtitle-font-size: 1.5rem;
     --main-font-text: 1.4rem;
-    --footer-font-size: 1.3rem;
+    --footer-font-size: 1.2rem;
 }
 /*MEDIA*/
 @media(min-width:900px){
@@ -55,6 +66,29 @@ body {
 /*SHARED*/
 .center-text {
     text-align: center;
+}
+.span-animation {
+    font-weight: bold;
+    color: rgb(228, 52, 52);
+    -webkit-animation: spancolor 20s infinite;
+    animation: spancolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+.section-title {
+    font-size: var(--main-title-font-size);
+}
+.section-subtitle {
+    font-size: var(--main-subtitle-font-size);
+}
+.project-tile {
+    margin-bottom: 10px;
+    width: 200px;
+    height: 200px;
+    background: rgba(29, 29, 29, 0.5);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 /*HEADER*/
 .header {
@@ -87,15 +121,20 @@ body {
     font-size: var(--main-font-text);
 }
 .welcome-section {
+    padding-top: 30px;
+    height: 20vh;
 }
-.welcome-section-title {
-    font-size: var(--main-title-font-size);
+.projects-section {
+    margin-top: 20px;
 }
-.welcome-section span {
-    font-weight: bold;
+.projects-grid {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.welcome-section-subtitle {
-    font-size: var(--main-subtitle-font-size);
+.tile1 {
+    background-image: url("../img/tribute_tile.png");
 }
 /*FOOTER*/
 .footer {
